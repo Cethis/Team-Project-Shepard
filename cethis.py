@@ -1,6 +1,6 @@
 import random
 
-sparkling_vampires = 100
+BloodVampires = 100
 you = 1
 armor = 50
 wooden_bullets = 35
@@ -8,8 +8,8 @@ progress_start = 0
 progress_end = 100
 progress = progress_start
 
-while you > 0 and sparkling_vampires > 0 and progress < progress_end:
-    print sparkling_vampires,you,armor,wooden_bullets,progress
+while you > 0 and BloodVampires > 0 and progress < progress_end:
+    print BloodVampires,you,armor,wooden_bullets,progress
     choice = input("What do you want to do (1->Run!) (2->Shoot?) (3->Stake?)")
     if choice == 1:
         progress = progress+int(random.random()*10)
@@ -17,13 +17,13 @@ while you > 0 and sparkling_vampires > 0 and progress < progress_end:
     if choice == 2:
         wooden_bullets -= 1
         number_shot = int(random.random()*3)
-        sparkling_vampires -= number_shot
+        BloodVampires -= number_shot
         print "You just shot",number_shot,"Sparkling Vampires in the heart!"
-        print "there are",sparkling_vampires,"Sparkling Vampires left."
+        print "there are",BloodVampires,"Sparkling Vampires left."
     if choice == 3:
-        sparkling_vampires -= 1
+        BloodVampires -= 1
         print"You have staked one vampire in the heart!"
-    if sparkling_vampires<0:
+    if BloodVampires<0:
         print"You have killed them all!"
     if progress>100:
         print"You have made it to saftey!"
